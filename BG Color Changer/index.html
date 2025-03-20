@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Color Changer</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <div class="main bg-gray-600 h-[100vh] w-[100vw] flex flex-col items-center justify-center gap-5">
+        <h1 class="text-gray-600 text-2xl font-extrabold">Background Color Changer</h1>
+        <button class="hexaBtn bg-slate-500 py-2 px-6 font-bold text-white rounded-lg hover:bg-gray-600">Change BG</button>
+        <h1 class="hexaClrCode text-2xl"></h1>
+        <button class="rgbBtn bg-blue-500 py-2 px-6 font-bold text-white rounded-lg hover:bg-blue-600">Change BG by RGB</button>
+        <h1 class="rgbClrCode text-2xl"></h1>
+    </div>
+
+
+    <script>
+        console.log("running")
+        let hexaButton = document.querySelector('.hexaBtn');
+        let hexaClrCode = document.querySelector('.hexaClrCode');
+        let rgbBtn = document.querySelector('.rgbBtn');
+        let rgbClrCode = document.querySelector('.rgbClrCode');
+        let main = document.querySelector('.main');
+
+        hexaButton.addEventListener('click', () => {
+            rgbClrCode.textContent = "";
+            let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            hexaClrCode.textContent = randomColor;
+            main.style.backgroundColor = randomColor;
+            // document.write(randomColor)
+            
+        });
+        
+        rgbBtn.addEventListener('click', () => {
+            hexaClrCode.textContent = "";
+            rndmClr = `rgb(` + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + `)`; 
+            main.style.backgroundColor = rndmClr;
+            rgbClrCode.textContent = rndmClr;
+        });
+
+
+    </script>
+</body>
+</html>

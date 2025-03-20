@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <div class="main h-[100vh] w-[100vw] bg-black flex items-center justify-center">
+        <div class="expenseTracker w-[90%] h-[98%] flex flex-col items-center justify-center text-yellow-300 p-5">
+            <div class="enterData inline-block text-center text-white">
+                <div class="inputs p-5">
+                    <input type="text" class="date pl-2 bg-slate-500 rounded-sm" placeholder="Enter Date" autofocus>
+                    <input type="text" class="category pl-2 bg-slate-500 rounded-sm" placeholder="Enter Category">
+                    <input type="text" class="title pl-2 bg-slate-500 rounded-sm" placeholder="Enter Title">
+                    <input type="text" class="amount pl-2 bg-slate-500 rounded-sm" placeholder="Enter Amount">
+                </div>
+                <button class="submitBtn px-5 py-1 bg-blue-500 text-black font-bold rounded-md mt-5">Submit</button>
+            </div>
+            <table class="data border-separate text-black mt-10 hidden">
+                <thead class="bg-blue-500">
+                    <tr>
+                        <th class="heading text-3xl font-extrabold px-5 py-2">Date</th>
+                        <th class="heading text-3xl font-extrabold px-5 py-2">Category</th>
+                        <th class="heading text-3xl font-extrabold px-5 py-2">Title</th>
+                        <th class="heading text-3xl font-extrabold px-5 py-2">Amount</th>
+                        <th class="heading text-3xl font-extrabold px-5 py-2">Update / Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr class="row1 bg-green-400 text-center">
+                        <td class="py-2 px-5 font-bold"><label class="dateData">07/03/25</label></td>
+                        <td class="py-2 px-5 font-bold"><label class="categoryData">Finance</label></td>
+                        <td class="py-2 px-5 font-bold"><label class="titleData">School Fee</label></td>
+                        <td class="py-2 px-5 font-bold"><label class="priceData">$500</label></td>
+                        <td class="py-2 px-5 font-bold"><button class=" px-3 bg-black text-white rounded-md hover:bg-[#222]">Edit</button></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

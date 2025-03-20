@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Love Btn</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: #000;
+        }
+        .container{
+            height: 70vh;
+            width: 25vw;
+            background: #000;
+            overflow: hidden;
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+            margin-top: 100px;
+        }
+        .container img{
+            /* height: 50%;
+            width: 50%; */
+            object-fit: cover;
+            object-position: -100px -100px;
+        }
+        .container i{
+            font-size: 80px;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            color: bisque;
+            opacity: 0;
+            transition: opacity ease 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1738762389093-ea0e0e80cee8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D" alt="">
+        <i class="ri-heart-3-fill"></i>
+    </div>
+    <script>
+        let con = document.querySelector(".container");
+        let love = document.querySelector("i");
+        con.addEventListener("dblclick", ()=>{
+            console.log("clicked");
+            love.style.opacity = 1;
+            setTimeout(()=>{
+                love.style.opacity = 0;
+            }, 1500)
+        })
+    </script>
+</body>
+</html>

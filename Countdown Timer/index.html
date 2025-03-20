@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown Timer</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <div class="main h-[100vh] w-[100vw] bg-black text-white">
+        <div class="container h-[100%] w-[100%] flex gap-20 items-center justify-center">
+            <div class="ascending-order flex flex-col border-2 p-10 border-gray-500 rounded-md items-center justify-center">
+                <h1 class="text-gray-400 font-extrabold">Ascending Order</h1>
+                <span class="ascVal text-[100px] font-extrabold">00</span>
+                <div class="btns flex gap-5">
+                    <button class="ascStart bg-white text-black font-bold px-5 py-1 rounded-lg hover:bg-gray-300">Start</button>
+                    <button class="ascStop bg-white text-black font-bold px-5 py-1 rounded-lg hover:bg-gray-300">Stop</button>
+                    <button class="ascReset bg-white text-black font-bold px-5 py-1 rounded-lg hover:bg-gray-300">Reset</button>
+                </div>
+            </div>
+            <div class="descending-order flex flex-col border-2 p-10 border-gray-500 rounded-md items-center justify-center">
+                <h1 class="text-gray-400 font-extrabold">Descending Order</h1>
+                <span class="desVal text-[100px] font-extrabold">00</span>
+                <p class="msg text-red-600 text-4xl mb-5"></p>
+                <div class="btns flex gap-5">
+                    <button class="oneMin bg-white text-black font-bold px-5 py-1 rounded-lg hover:bg-gray-300">1 Min</button>
+                    <button class="twoMin bg-white text-black font-bold px-5 py-1 rounded-lg hover:bg-gray-300">2 Min</button>
+                    <button class="fiveMin bg-white text-black font-bold px-5 py-1 rounded-lg hover:bg-gray-300">5 Min</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

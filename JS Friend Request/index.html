@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Friend Request</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            color: orange;
+            transform: translateY(30%);
+        }
+        .container{
+            background: bisque;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .upper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .upper img{
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+        }
+        .bottom{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: red;
+        }
+        .bottom button{
+            background: #000;
+            color: bisque;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        button:hover{
+            color: goldenrod;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="upper">
+            <img src="https://images.unsplash.com/photo-1739582814657-10931286d7a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8" alt="">
+            <div class="name"><h1>Aliya</h1></div>
+        </div>
+        <div class="bottom">
+            <h2 class="status">Stranger</h2>
+            <button>Add Friend</button>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelector("button");
+        let fstatus = document.querySelector(".status");
+        let flag = 0;
+        btn.addEventListener("click", () => {
+            if(flag == 0){
+                btn.innerText = "Remove";
+                fstatus.innerText = "Friends";
+                fstatus.style.color = "green";
+                flag = 1;
+            }
+            else{
+                btn.innerText = "Add Friend";
+                fstatus.innerText = "Stranger";
+                fstatus.style.color = "red";
+                flag = 0;
+            }
+        })
+
+    </script>
+</body>
+</html>

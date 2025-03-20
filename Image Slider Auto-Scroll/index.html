@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider Auto Scroll</title>
+    <link rel="stylesheet" href="../output.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="main h-[100vh] w-[100vw] flex flex-col items-center justify-center bg-black text-gray-600">
+        <div class="slider h-[65%] w-[50%] p-1 rounded-[50px] overflow-hidden">
+            <div class="imgCon relative h-[100%] w-[100%] bg-gray-800 flex flex-col items-center justify-center">
+                <div class="imgText h-[100%] w-[100%]">
+                    <!-- data from js -->
+                </div>
+                <div class="btnDots absolute h-[100%] w-[100%]">
+                    <div class="btns flex justify-between">
+                        <button class="btn prev absolute top-[50%] left-2"><i class="ri-arrow-left-circle-fill text-6xl text-gray-400 hover:text-gray-500 hover:scale-[1.05]"></i></button>
+                        <button class="btn next absolute top-[50%] right-2"><i class="ri-arrow-right-circle-fill text-6xl text-gray-400 hover:text-gray-500 hover:scale-[1.05]"></i></button>
+                    </div>
+                    <div class="dots h-[100%] w-[100%]">
+                        <i class="ri-circle-fill text-white hover:text-gray-300 absolute bottom-2 left-[42%] right-10 cursor-pointer"></i>
+                        <i class="ri-circle-fill text-white hover:text-gray-300 absolute bottom-2 left-[45%] right-10 cursor-pointer"></i>
+                        <i class="ri-circle-fill text-white hover:text-gray-300 absolute bottom-2 left-[48%] right-10 cursor-pointer"></i>
+                        <i class="ri-circle-fill text-white hover:text-gray-300 absolute bottom-2 left-[51%] right-10 cursor-pointer"></i>
+                        <i class="ri-circle-fill text-white hover:text-gray-300 absolute bottom-2 left-[54%] right-10 cursor-pointer"></i>
+                        <i class="ri-circle-fill text-white hover:text-gray-300 absolute bottom-2 left-[57%] right-10 cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

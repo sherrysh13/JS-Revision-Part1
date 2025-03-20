@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <div class="main h-[100vh] w-[100vw] bg-gray-900 text-white flex items-center justify-center flex-col">
+        <h1 class="text-4xl">Image Slider</h1>
+        <div class="imageSlider h-[60%] w-[30%] relative">
+            <img src="img1.jpg" alt="">
+            <button class="prevBtn absolute top-[33%] left-3 bg-[#222] px-4 py-1.5 cursor-pointer rounded-md">Prev</button>
+            <button class="nextBtn absolute top-[33%] right-3 bg-[#222] px-4 py-1.5 cursor-pointer rounded-md">Next</button>
+        </div>
+        <button class="bgClrBtn bg-white px-4 py-1.5 cursor-pointer text-gray-700 font-bold rounded-md">Change BG</button>
+    </div>
+
+    <script>
+        let prevBtn = document.querySelector('.prevBtn')
+        let nextBtn = document.querySelector('.nextBtn')
+        let bgClrBtn = document.querySelector('.bgClrBtn')
+        let img = document.querySelector('img')
+        let main = document.querySelector('.main')
+
+        let images = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg']
+        let index = 0;
+
+        nextBtn.addEventListener('click', ()=> {
+            index = (index + 1) % images.length;
+            img.src = images[index];
+        })
+        prevBtn.addEventListener('click', ()=> {
+            index = (index - 1 + images.length) % images.length;
+            img.src = images[index];
+        })
+
+        bgClrBtn.addEventListener('click', () => {
+            main.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`
+        })
+    </script>
+</body>
+</html>

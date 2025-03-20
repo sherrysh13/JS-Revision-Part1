@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+<body>
+    <div class="main h-[100vh] w-[100vw] bg-black flex flex-col items-center justify-center">
+        <div class="counter flex gap-10">
+            <button class="decBtn bg-teal-400 rounded-md px-5 font-extrabold text-5xl">-</button>
+            <span class="value bg-[#222] text-teal-400 px-5 py-1 text-7xl rounded-lg font-extrabold">0</span>
+            <button class="incBtn bg-teal-400 rounded-md px-5 font-extrabold text-5xl">+</button>
+        </div>
+        <button class="resetBtn bg-teal-400 rounded-md px-5 py-2 font-extrabold mt-10">Reset</button>
+    </div>
+
+    <script>
+        let incBtn = document.querySelector('.incBtn')
+        let decBtn = document.querySelector('.decBtn')
+        let value = document.querySelector('.value')
+        let resetBtn = document.querySelector('.resetBtn')
+        val = 0;
+
+        incBtn.addEventListener('click', () => {
+            val++;
+            value.textContent = val;
+        })
+
+        decBtn.addEventListener('click', () => {
+            val--;
+            value.textContent = val;
+        })
+        
+        resetBtn.addEventListener('click', () => {
+            val = 0;
+            value.textContent = val;
+        })
+
+    </script>
+</body>
+</html>

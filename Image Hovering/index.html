@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hovering Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background: #000;
+            position: relative;
+            color: wheat;
+        }
+        .boxes{
+            display: flex;
+            flex-direction: column;
+        }
+        .box{
+            border-bottom: 5px solid wheat;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            position: absolute;
+            object-fit: cover;
+            /* transition: ease 0.1s; */
+            display: none;
+        }
+        h1{
+            font-size: 100px;
+            margin-left: 20px;
+            z-index: 9;
+            mix-blend-mode: difference;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="boxes">
+            <div class="box">
+                <img src="https://plus.unsplash.com/premium_photo-1739327379498-e9a3cf4bb71f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxODV8fHxlbnwwfHx8fHw%3D" alt="">
+                <h1>Stag</h1>
+            </div>
+            <div class="box">
+                <img src="https://images.unsplash.com/photo-1739481152766-5658f44147f6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMzl8fHxlbnwwfHx8fHw%3D" alt="">
+                <h1>Lion</h1>
+            </div>
+            <div class="box">
+                <img src="https://images.unsplash.com/photo-1739433438331-e50bb5467531?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2Nnx8fGVufDB8fHx8fA%3D%3D" alt="">
+                <h1>Nature</h1>
+            </div>
+            <div class="box">
+                <img src="https://images.unsplash.com/photo-1738071545459-e19435ae37e0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMjZ8fHxlbnwwfHx8fHw%3D" alt="">
+                <h1>Waterfall</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let box = document.querySelectorAll(".box");
+        let img = document.querySelector("img");
+
+        box.forEach((eachElem)=>{
+            // console.log(eachElem);
+            eachElem.addEventListener("mouseenter", ()=>{
+                eachElem.childNodes[1].style.display = "block";
+            })
+            eachElem.addEventListener("mouseleave", ()=>{
+                eachElem.childNodes[1].style.display = "none";
+            })
+            eachElem.addEventListener("mousemove", (dets)=>{
+                eachElem.childNodes[1].style.left = dets.x+"px";
+            })
+        })
+    </script>
+</body>
+</html>
